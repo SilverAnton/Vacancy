@@ -17,15 +17,15 @@ class BaseVacancy(ABC):
         pass
 
 
-class ConvertVacancyToJson(ABC):
+class ConvertUserVacancyBase(ABC):
     @abstractmethod
-    def add_vacancy_to_json(*args, **kwargs):
+    def add_vacancy_to_json(self, *args):
         pass
 
     @abstractmethod
-    def get_vacancy_from_json(*args, **kwargs):
+    def get_vacancy_by_keyword(self, *args, **kwargs):
         pass
 
     @abstractmethod
-    def del_vacancy_from_json(*args, **kwargs):
+    def del_vacancy_from_json(self, *args, **kwargs):
         pass
