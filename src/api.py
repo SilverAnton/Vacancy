@@ -1,9 +1,9 @@
-from base_class import BaseVacancy
+from src.base_class import BaseVacancy
 import requests
 import json
 
 
-class API(BaseVacancy):
+class Api(BaseVacancy):
     def __init__(self):
         self.__url = 'https://api.hh.ru/vacancies'
         self.__headers = {'User-Agent': 'HH-User-Agent'}
