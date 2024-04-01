@@ -10,10 +10,8 @@ def main_foo():
     list_vacancies = Vacancy.get_obj_list('vacancies.json')
     ConvertUserVacancy.add_vacancy_to_json(list_vacancies)
     top_count = int(input("введите количество ТОП-вакансий, по уровню зарплаты"))
-    if type(top_count) is int:
-        print(ConvertUserVacancy.sort_vacancies_by_salary(top_count))
-    else:
-        print('неверное значение')
+    print()
+    print(ConvertUserVacancy.sort_vacancies_by_salary(top_count))
     print(ConvertUserVacancy.get_vacancy_by_keyword(str(input('введите ключевое слово '
                                                               'для сортировки списка вакансий'))))
 
