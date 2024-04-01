@@ -11,12 +11,13 @@ class Vacancy:
         self.vacancies = []
 
     def __str__(self):
-        return f"должность:{self.name}, работодатель:{self.employer}, город:{self.city}, з/п:{self.salary}, обязанности:{self.description}"
+        return (f"должность:{self.name}, работодатель:{self.employer}, город:{self.city}, "
+                f"з/п:{self.salary}, обязанности:{self.description}")
 
     @staticmethod
     def get_obj_list(file_vacancies):
         """ Метод загружает файл json с выбранными профессиями, фильтрует его по значениям SALARY и RESPONSIBILITY.
-        Возвращает список экземпляров класса WorkWithVacancy"""
+        Возвращает список экземпляров класса Vacancy"""
         list_vacancies = []
         with open(file_vacancies) as file:
             vacancies = json.load(file)
